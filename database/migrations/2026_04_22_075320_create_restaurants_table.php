@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('address');
             $table->float('rating');
-            $table->integer('phone_number')->unique();
+            $table->integer('phone_number');
             $table->timestamps();
         });
     }

@@ -2,18 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Food;
 use Illuminate\Http\Request;
 
 class FoodController extends Controller
 {
-    public function foodIndex(){
-        $foods = \App\Models\Food::inRandomOrder()->first();
-    }
-
-
-    public function foodShow($id)
+    public function foodIndex(Request $request)
     {
-        $food = \App\Models\Food::where('id', $id)->firstOrFail();
-        return view('foods.show', compact('food'));
+        
+        $foods = Food::all(); 
+
+        return view('foods.index', compact('foods'));
     }
+
+
+   
+        public function foodShow($id)
+{
+    $food = Food::with(['category', 'restaurant'])->findOrFail($id);
+    return view('foods.show', compact('food'));
 }
+    }
+

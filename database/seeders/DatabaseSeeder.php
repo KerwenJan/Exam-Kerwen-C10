@@ -16,10 +16,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     { 
         $this->call([
-            CategorySeeder::class,
-            RestaurantSeeder::class, // Run this first!
-            FoodSeeder::class,       // Then run this.
+            // CategorySeeder::class,
+            // RestaurantSeeder::class, 
         ]);
-        // \App\Models\Food::factory(1000)->create();  
+        \App\Models\Food::factory(1000)->create(); 
     }
 }
