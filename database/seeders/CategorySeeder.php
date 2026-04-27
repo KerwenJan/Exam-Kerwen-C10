@@ -12,6 +12,24 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $categories = [
+            'Icda acar',
+            'Ertirlik',
+            'Irdenlik',
+            'Salatlar',
+            'Icgiler',
+            'Cagalar Menyusy',
+            'Mangal bolumi',
+            'Burgerlar',
+            'Cay bolumi',
+            'Desertlar'
+
+        ];
+        
+        foreach ($categories as $category) {
+            \App\Models\Category::create([
+                'name' => $category
+            ]);
+        }
     }
 }

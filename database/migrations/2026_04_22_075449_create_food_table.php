@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('food', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
-            $table->foreignId('restaurant_id')->constrained('restaurants')->cascadeOnDelete();
+            $table->foreignId('category_id')->nullable()->constrained('categories');
+            $table->foreignId('restaurant_id')->nullable()->constrained('restaurants');
             $table->string('name');
             $table->float('price');
             $table->string('code');
-            $table->integer('like_count');
+            $table->integer('like_count')->unsigned()->default(0);
             $table->timestamps();
         });
     }
