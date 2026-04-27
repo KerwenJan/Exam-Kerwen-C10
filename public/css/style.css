@@ -1,0 +1,47 @@
+.bg-image-1 {
+    background-image: url('../img/river-flowing-through-forest-generative-al2-min.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #cccccc;
+}
+
+.bg-image-2 {
+    background-image: url('../img/cvcv-min.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.bg-image-3 {
+    background-image: url('../img/cvcv-min.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-image-4 {
+    background-image: url('../img/gfgfggfggg-min.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.bg-shadow {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.bg-brown-light {
+    background-color: #A5966F;
+}
+
+p i {
+    color: #A5966F;
+    font-size: 20px;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
